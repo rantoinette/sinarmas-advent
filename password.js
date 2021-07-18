@@ -1,18 +1,18 @@
 //checking if the number is valid as password
 
 function validPassword(pass) {
+  let strPass = String(pass);
+
   //if it's 6 digit
-  if (String(pass).length !== 6) {
+  if (strPass.length !== 6) {
     return false;
   }
 
-  let strPass = String(pass);
   hasDoubleDigit = false;
 
   for (let i = 0; i < strPass.length; i++) {
     //if the next number is less than the previous number
     if (strPass[i] > strPass[i + 1]) {
-      console.log(strPass[i] > strPass[i + 1], "<<<");
       return false;
     }
     //if it has double digit
@@ -35,4 +35,4 @@ function numberOfPassword(input) {
   return counter;
 }
 
-console.log(numberOfPassword("11 - 22"));
+console.log(numberOfPassword("245318-765747"));
